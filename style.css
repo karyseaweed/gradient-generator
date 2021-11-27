@@ -1,0 +1,92 @@
+body {
+	font-family: 'Raleway', sans-serif;
+    color: rgba(0,0,0,.5);
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .5em;
+    top: 15%;
+    max-width: 1200px;
+    margin: auto;
+	background: linear-gradient(to right, rgb(109, 161, 243), rgb(253, 237, 253)); /* Standard syntax */
+}
+
+h1 {
+    font-family: 600 3.5em 'Raleway', sans-serif;
+    color: rgba(0,0,0,.5);
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .5em;
+    width: 100%;
+}
+
+h3 {
+	font-family: 900 1em 'Raleway', sans-serif;
+    color: rgba(0,0,0,.5);
+    text-align: center;
+    text-transform: none;
+    letter-spacing: 0.01em;
+}
+
+p {
+    letter-spacing: 0.25em;
+}
+
+.control-btns {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.control-btns button {
+    margin: 0 15px;
+}
+
+#cards {
+    background-color: #fff;
+    width: 100%;
+    max-width: 700px;
+    min-height: 500px;
+    margin: 40px auto;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 200px;
+    height: 200px;
+    margin: 0 15px 15px;
+    border: 1px solid #fff;
+    transition: all 0.25s linear;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    -webkit-transition: all 0.25s linear;
+    -moz-transition: all 0.25s linear;
+    -ms-transition: all 0.25s linear;
+    -o-transition: all 0.25s linear;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card:hover {
+    box-shadow:#ffffff75 0 0 5px 5px;
+}
+
+.card:hover .copyBtn {
+    opacity: 1;
+}
+
+.copyBtn {
+    height: 40px;
+    opacity: 0;
+    transition: all 0.25s linear;
+    -webkit-transition: all 0.25s linear;
+    -moz-transition: all 0.25s linear;
+    -ms-transition: all 0.25s linear;
+    -o-transition: all 0.25s linear;
+}
