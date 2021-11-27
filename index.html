@@ -1,22 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Gradient Background</title>
+	<!-- Google fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+	<!--  -->
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body id="gradient">
-	<h1>Gradient Generator</h1>
-	<input class="color1" type="color" name="color1" value="#6da0f3">
-	<input class="color2" type="color" name="color2" value="#fdedfd">
-	<h2>Current CSS Background</h2>
-	<h3>linear-gradient(to right, rgb(109, 161, 243), rgb(253, 237, 253))</h3>
-	<button id="change">Generate Random Gradient Background</button>
-	<p>If you like this gradient, press SAVE to generate color card.<br>you can keep adding them to the color board below!</p>
-	<div class="control-btns">
-		<button id="save">Add to Color Board</button>
-		<button id="clear">Clear</button>
+	<div class="content">
+		<h1>Gradient Generator</h1>
+		<button id="change">Generate Random Gradient</button>
+		<div class="color-inputs">
+			<input class="color1" type="color" name="color1" value="#6da0f3">
+			<input class="color2" type="color" name="color2" value="#fdedfd">
+		</div>
+		<h3>Current CSS Background</h3>
+		<p>linear-gradient(to right, rgb(109, 161, 243), rgb(253, 237, 253))</p>
+		<button id="save">Save this color</button>
+		<div id="board">
+			<h3 class="dark">YOUR SAVED COLORS</h3>
+			<button id="clear">Clear Board</button>
+			<div id="cards"></div>
+		</div>
 	</div>
-	<div id="cards"></div>
 	<script type="text/javascript" src="script.js"></script>
 </body>
 </html>

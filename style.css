@@ -1,53 +1,93 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
-	font-family: 'Raleway', sans-serif;
-    color: rgba(0,0,0,.5);
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color: #FFF;
     text-align: center;
     text-transform: uppercase;
-    letter-spacing: .5em;
-    top: 15%;
+    letter-spacing: .05em;
+    margin: auto;
+	background: linear-gradient(to right, #94BBE9, #EEAECA);
+}
+
+.content {
+    width: 100%;
     max-width: 1200px;
     margin: auto;
-	background: linear-gradient(to right, rgb(109, 161, 243), rgb(253, 237, 253)); /* Standard syntax */
+    padding: 5em 1.5em;
 }
 
 h1 {
-    font-family: 600 3.5em 'Raleway', sans-serif;
-    color: rgba(0,0,0,.5);
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: .5em;
-    width: 100%;
+    font-weight: 600;
+    font-size: 3.125rem;
+    letter-spacing: 0.15em;
+    margin: 0;
 }
 
 h3 {
-	font-family: 900 1em 'Raleway', sans-serif;
-    color: rgba(0,0,0,.5);
-    text-align: center;
-    text-transform: none;
-    letter-spacing: 0.01em;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+h3.dark {
+    color: #3C3C3C;
 }
 
 p {
-    letter-spacing: 0.25em;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #ECECEC;
+    text-transform: none;
 }
 
-.control-btns {
-    display: flex;
-    justify-content: center;
-    align-content: center;
+button {
+    font-size: 1rem;
+    letter-spacing: inherit;
+    text-transform: uppercase;
+    margin: 2.5rem 0;
+    padding: 0.625em 1.25em;
+    background-color: #ECECEC;
+    border: none;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
 }
 
-.control-btns button {
-    margin: 0 15px;
+input[type="color"] {
+    -webkit-appearance: none;
+    border: none;
+    background: none;
+    width: 60px;
+    height: 40px;
+}
+input[type="color"]::-webkit-color-swatch-wrapper {
+	padding: 0;
+}
+input[type="color"]::-webkit-color-swatch {
+	border: none;
+}
+
+#board {
+    background: rgba(252, 252, 252, 0.5);
+    box-shadow: 5px 4px 23px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 1060px;
+    margin: 40px auto;
+    min-height: 500px;
+    padding: 40px 0;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
 }
 
 #cards {
-    background-color: #fff;
-    width: 100%;
-    max-width: 700px;
-    min-height: 500px;
-    margin: 40px auto;
-    padding: 40px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
