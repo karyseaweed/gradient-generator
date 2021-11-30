@@ -64,12 +64,13 @@ function copyToClipboard() {
 }
 
 function delColor() {
-	console.log(this.parentNode);
 	this.parentNode.remove();
+	sessionStorage.clear();
 }
 
 function clearBoard() {
 	cards.innerHTML = "";
+	sessionStorage.clear();
 }
 
 // clear sessionStorage on page reload
