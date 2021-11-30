@@ -1,11 +1,10 @@
-let css = document.querySelector("h3");
 let color1 = document.querySelector(".color1");
 let color2 = document.querySelector(".color2");
-let body = document.querySelector("#gradient");
 let btnChange = document.querySelector("#change");
 let btnSave = document.querySelector("#save");
 let btnClear = document.querySelector("#clear");
 let cards = document.querySelector("#cards");
+
 
 function setCss() {
 	return "linear-gradient(to right, " 
@@ -16,6 +15,13 @@ function setCss() {
 }
 
 function setGradient() {
+	let label1 = color1.parentNode;
+	let label2 = color2.parentNode;
+	let body = document.querySelector("#gradient");
+	let css = document.querySelector("p");
+	// 
+	label1.style.background = color1.value;
+	label2.style.background = color2.value;
 	body.style.background = setCss();
 	css.textContent = body.style.background;
 }
@@ -28,19 +34,33 @@ function generateRandomColor() {
 
 function createColorCard() {
 	let card = document.createElement("div");
+	let copyBtn = document.createElement("button");
+	let delBtn = document.createElement("button");
+	// 
 	card.className = "card";
 	card.style.background = setCss();
-	let copyBtn = document.createElement("button");
+	// 
 	copyBtn.className = "copyBtn";
 	copyBtn.innerHTML = "copy to clipboard";
 	copyBtn.addEventListener("click", copyToClipboard);
+	// 
+	delBtn.className = "delBtn";
+	delBtn.innerHTML = '<img src="img/del-x.svg" alt="del button">';
+	delBtn.addEventListener("click", delColor);
+	// 
 	card.append(copyBtn);
+	card.append(delBtn);
 	cards.append(card);
 }
 
 function copyToClipboard() {
 	let colorToCopy = this.parentNode.style.background;
 	navigator.clipboard.writeText(colorToCopy);
+}
+
+function delColor() {
+	console.log(this.parentNode);
+	this.parentNode.remove();
 }
 
 function clearBoard() {

@@ -15,15 +15,15 @@
 		<h1>Gradient Generator</h1>
 		<button id="change">Generate Random Gradient</button>
 		<div class="color-inputs">
-			<input class="color1" type="color" name="color1" value="#6da0f3">
-			<input class="color2" type="color" name="color2" value="#fdedfd">
+			<label for="color1" id="label1"><input class="color1" type="color" name="color1" value="#6da0f3"></label>
+			<label for="color2" id="label2"><input class="color2" type="color" name="color2" value="#fdedfd"></label>
 		</div>
 		<h3>Current CSS Background</h3>
 		<p>linear-gradient(to right, rgb(109, 161, 243), rgb(253, 237, 253))</p>
-		<button id="save">Save this color</button>
+		<button id="save" class="mt-0">Save this color</button>
 		<div id="board">
-			<h3 class="dark">YOUR SAVED COLORS</h3>
-			<button id="clear">Clear Board</button>
+			<h3 class="dark mt-0">YOUR SAVED COLORS</h3>
+			<button id="clear" class="mt-0">Clear Board</button>
 			<div id="cards"></div>
 		</div>
 	</div>
