@@ -50,6 +50,7 @@ p {
 }
 
 button {
+	color: #3C3C3C;
 	font-size: 1rem;
 	letter-spacing: inherit;
 	text-transform: uppercase;
@@ -144,11 +145,11 @@ input[type="color"] {
 
 .card:hover .copyBtn,
 .card:hover .delBtn {
-	opacity: 1;
+	/* opacity: 1; */
 }
 
 .copyBtn, .delBtn {
-	opacity: 0;
+	/* opacity: 0; */
 	transition: all 0.15s linear;
 	-webkit-transition: all 0.15s linear;
 	-moz-transition: all 0.15s linear;
@@ -170,6 +171,9 @@ input[type="color"] {
 	width: 24px;
 	height: 24px;
 	background: #ECECEC;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	border-radius: 50%;
 	-webkit-border-radius: 50%;
 	-moz-border-radius: 50%;

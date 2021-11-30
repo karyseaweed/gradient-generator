@@ -30,6 +30,7 @@ function generateRandomColor() {
 	color1.value = "#" + Math.floor(Math.random()*16777215).toString(16);
 	color2.value = "#" + Math.floor(Math.random()*16777215).toString(16);
 	setGradient();
+	sessionStorage.clear();
 }
 
 function createColorCard() {
@@ -39,18 +40,22 @@ function createColorCard() {
 	// 
 	card.className = "card";
 	card.style.background = setCss();
-	// 
-	copyBtn.className = "copyBtn";
-	copyBtn.innerHTML = "copy to clipboard";
-	copyBtn.addEventListener("click", copyToClipboard);
-	// 
-	delBtn.className = "delBtn";
-	delBtn.innerHTML = '<img src="img/del-x.svg" alt="del button">';
-	delBtn.addEventListener("click", delColor);
-	// 
-	card.append(copyBtn);
-	card.append(delBtn);
-	cards.append(card);
+	// use sessionStorage to check if this color card has already been created
+	if (sessionStorage.getItem("color") !== card.style.background) {
+		sessionStorage.setItem("color", card.style.background);
+		// 
+		copyBtn.className = "copyBtn";
+		copyBtn.innerHTML = "copy to clipboard";
+		copyBtn.addEventListener("click", copyToClipboard);
+		// 
+		delBtn.className = "delBtn";
+		delBtn.innerHTML = '<img src="img/del-x.svg" alt="del button">';
+		delBtn.addEventListener("click", delColor);
+		// 
+		card.append(copyBtn);
+		card.append(delBtn);
+		cards.append(card);
+	}
 }
 
 function copyToClipboard() {
@@ -66,6 +71,11 @@ function delColor() {
 function clearBoard() {
 	cards.innerHTML = "";
 }
+
+// clear sessionStorage on page reload
+(function clearStorage() {
+	sessionStorage.clear()
+})();
 
 // listen to color input event
 color1.addEventListener("input", setGradient);
