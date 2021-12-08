@@ -6,4 +6,4 @@ You can also copy the css styles to your clipboard!
 ## contributors
 
 - [original project](https://aneagoie.github.io/background-generator/) without color board functionality
-- styled by Rebecca Yip https://rebeccayipdesign.com/
+- styled by [Rebecca Yip](https://rebeccayipdesign.com/)
